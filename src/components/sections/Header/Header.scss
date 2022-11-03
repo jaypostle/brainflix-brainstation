@@ -25,6 +25,7 @@
             // outline: 1px solid main.$Silver;
             border: 1px solid main.$Mercury;
             background-color: main.$Alabaster;
+           
         }
 
         &__search-icon {
@@ -80,6 +81,7 @@
     text-align: center;
     text-decoration: none;
     @include main.mixins-display-flex($justifyContent: space-between, $gap: 0rem );
+    cursor: pointer;
 
     &:hover {
         background-color: main.$BrainFlix-DarkBlue;
