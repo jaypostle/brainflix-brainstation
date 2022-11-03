@@ -16,17 +16,18 @@ function MovieDetails({videoDetails}) {
         <div className="meta-data-wrapper--creator-info">
           <span className="movie-metadata__creator">By {videoDetails.channel}</span><span className="movie-metadata__date">{videoDetails.timestamp}</span>
         </div>
-        <div className="meta-data-wrapper--views">
-          <img src={Views} alt="views icon" />
-          <span className="movie-metadata__views">{videoDetails.views}</span>
-        </div>
-        <div className="meta-data-wrapper--likes">
-          <img src={Likes} alt="likes icon" />
-          <span className="movie-metadata__likes">{videoDetails.likes}</span>
-        </div>
-      <p className="movie-details__description">{videoDetails.description}</p>
-       
+        <div className="meta-data-wrapper--public-info">
+          <div className="meta-data-wrapper--views">
+            <img src={Views} alt="views icon" />
+            <span className="movie-metadata__views">{videoDetails.views}</span>
+          </div>
+          <div className="meta-data-wrapper--likes">
+            <img src={Likes} alt="likes icon" />
+            <span className="movie-metadata__likes">{videoDetails.likes}</span>
+          </div>
+        </div>       
      </div>
+     <p className="movie-details__description">{videoDetails.description}</p>
     </section>
   )
 }

@@ -8,13 +8,12 @@ function Hero({videoDetails}) {
       <video className='hero__video' src={videoDetails.video} poster={videoDetails.image} controls>
       </video>
       <div className="video-controls">
-        {videoDetails.duration}
+        {/* {videoDetails.duration} */}
         {/* Play button */}
         {/* Scrubber */}
         {/* Expand */}
         {/* Volume Control */}
       </div>
-    <p>placeholder banner</p>    
 </section>
   )
 }
