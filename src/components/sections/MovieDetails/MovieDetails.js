@@ -11,22 +11,23 @@ function MovieDetails({videoDetails}) {
   
   return (
     <section className='movie-details'>
-      <h1 className="movie-details__title">{videoDetails[0].title}</h1>
+      <h1 className="movie-details__title">{videoDetails.title}</h1>
       <div className="movie-metadata">
         <div className="meta-data-wrapper--creator-info">
-          <span className="movie-metadata__creator">By {videoDetails[0].channel}</span><span className="movie-metadata__date">{videoDetails[0].timestamp}</span>
+          <span className="movie-metadata__creator">By {videoDetails.channel}</span><span className="movie-metadata__date">{videoDetails.timestamp}</span>
         </div>
-        <div className="meta-data-wrapper--views">
-          <img src={Views} alt="views icon" />
-          <span className="movie-metadata__views">{videoDetails[0].views}</span>
-        </div>
-        <div className="meta-data-wrapper--likes">
-          <img src={Likes} alt="likes icon" />
-          <span className="movie-metadata__likes">{videoDetails[0].likes}</span>
-        </div>
-      <p className="movie-details__description">{videoDetails[0].description}</p>
-       
+        <div className="meta-data-wrapper--public-info">
+          <div className="meta-data-wrapper--views">
+            <img src={Views} alt="views icon" />
+            <span className="movie-metadata__views">{videoDetails.views}</span>
+          </div>
+          <div className="meta-data-wrapper--likes">
+            <img src={Likes} alt="likes icon" />
+            <span className="movie-metadata__likes">{videoDetails.likes}</span>
+          </div>
+        </div>       
      </div>
+     <p className="movie-details__description">{videoDetails.description}</p>
     </section>
   )
 }
