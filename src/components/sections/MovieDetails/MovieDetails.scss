@@ -50,3 +50,16 @@
         @include main.mixins-display-flex($justifyContent: left, $gap: 0rem);
     }
 }
+
+
+@include main.breakpoints-medium {
+    
+    .meta-data-wrapper--creator-info {
+        flex-direction: row;
+    }
+
+    .meta-data-wrapper--public-info {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}

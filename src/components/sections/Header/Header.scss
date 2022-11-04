@@ -91,6 +91,38 @@
 
 // Over Tablet Sizes
 @include main.breakpoints-medium {
+
+    .header {
+        flex-direction: row;
+        &-nav {
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1rem;
+
+            &__search {
+                width: 15rem;
+            }
+
+            &__button {
+                margin-top: 0rem;
+                width: 12.5rem;
+                height: 44px;
+            }
+
+            &__avatar {
+                order: 3;
+
+                img {
+                    height: 44px;
+                    width:  44px;
+                    object-fit: cover;
+                }
+               
+            }
+
+        }
+
+    }
     .primary-btn {
         // height: 2.5rem;
         min-width: 9.375rem;

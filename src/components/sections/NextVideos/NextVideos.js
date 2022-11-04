@@ -13,6 +13,7 @@ function NextVideos({videoList, onVideoClick}) {
       {videoList && videoList.map((video) => {
         return(
           <article className="next-video" key={video.id}>
+          {/* <div className='next-video__thumbnail'> */}
           <img 
             className='next-video__thumbnail' 
             src={video.image} 
@@ -21,8 +22,9 @@ function NextVideos({videoList, onVideoClick}) {
               onVideoClick(event, video.id);
             }}
             />
+          {/* </div> */}
           <div className="next-video__meta-data">
-            <p className="next-video__title">{video.title}</p>
+            <h3 className="next-video__title">{video.title}</h3>
             <p className="next-video__creator">{video.channel}</p>
           </div>
         </article>
