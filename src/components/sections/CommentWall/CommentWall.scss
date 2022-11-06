@@ -2,7 +2,7 @@
 
 // ** Section and Wrapper ** //
 .section--comments {
-    padding: 0rem 1rem;
+    padding: 1rem 1rem;
 }
 
 .comment-feed__form-wrapper {
@@ -87,6 +87,60 @@
     }
 
     &__comment {
-
+        margin-bottom: 0px;
     }
+}
+
+
+@include main.breakpoints-medium {
+    .section--comments {
+        padding: 1rem 2rem;
+    }
+
+    
+    .comment-feed {
+        &-form {
+            flex-direction: row;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+        &__label {
+            flex: 3;
+        }
+
+        &__input-textarea {
+            height: 2.75rem;
+        }
+
+        &__submit{
+            flex: 1;
+            margin-bottom: 0.425rem;
+        }
+    }
+}
+
+
+
+// Over Desktop Sizes
+@include main.breakpoints-large {
+    .section--comments {
+        padding: 1rem 0rem;
+        // padding-right: 1rem;
+    }
+
+    .comment-feed {
+
+        &__form-wrapper {
+            padding-right: 1.5rem;
+        }
+
+        &-waterfall__text-info {
+            padding-right: 1.5rem;
+        }
+
+        &__submit{
+            flex: 1.25;
+        }
+    }
+
 }

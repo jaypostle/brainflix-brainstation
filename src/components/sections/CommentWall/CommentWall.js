@@ -17,6 +17,7 @@ function CommentWall({videoComments}) {
                         </label> */}
                         <label htmlFor="comment" className='comment-feed__label'>
                             Join the conversation: <br />
+                        {/* </label> */}
                             <textarea type="text" className="comment-feed__input-textarea comment-feed__input--comment" id="comment" name="comment" placeholder="Add a new comment"/>
                         </label>
                         <button className='primary-btn header-nav__button comment-feed__submit' href="/">

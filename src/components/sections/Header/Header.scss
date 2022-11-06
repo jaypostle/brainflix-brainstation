@@ -94,6 +94,8 @@
 
     .header {
         flex-direction: row;
+        padding: 1rem 2rem;
+        
         &-nav {
             align-items: center;
             justify-content: flex-end;
@@ -128,6 +130,16 @@
         min-width: 9.375rem;
         max-width: 15rem; // arbitrary, not yet set or figured out
         padding: 0rem 0.5rem;
+    }
+
+}
+
+// Over Desktop Sizes
+@include main.breakpoints-large {
+    .header {
+        max-width: 63.75rem;
+        margin: 0 auto;
+        padding: 1rem 0rem;
     }
 
 }
