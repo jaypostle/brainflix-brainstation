@@ -35,9 +35,15 @@ function App() {
     <div className="App">
       <Header />
       <Hero videoDetails={videoExpandedDetails}/>
-      <MovieDetails videoDetails={videoExpandedDetails}/>
-      <CommentWall videoComments={videoExpandedDetails.comments}/>
-      <NextVideos videoList={videos} onVideoClick={handleChangeVideo}/>
+      <main className='video-content'>
+        <div className="video-content__details">
+          <MovieDetails videoDetails={videoExpandedDetails}/>
+          <CommentWall videoComments={videoExpandedDetails.comments}/>
+        </div>
+        <div className="video-content__next">
+          <NextVideos videoList={videos} onVideoClick={handleChangeVideo}/>
+        </div>
+      </main>
     </div>
   );
 }

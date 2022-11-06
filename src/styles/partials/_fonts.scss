@@ -5,6 +5,15 @@
     font-weight: 400;
     font-style: normal;
   }
+
+    /* DemiBold */
+    @font-face {
+      font-family: "Avenir";
+      src: url("../../assets/fonts/AvenirNextLTPro-Demi.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+    }
+    
   
   /* Bold */
   @font-face {

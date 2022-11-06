@@ -25,6 +25,7 @@
             // outline: 1px solid main.$Silver;
             border: 1px solid main.$Mercury;
             background-color: main.$Alabaster;
+           
         }
 
         &__search-icon {
@@ -80,6 +81,7 @@
     text-align: center;
     text-decoration: none;
     @include main.mixins-display-flex($justifyContent: space-between, $gap: 0rem );
+    cursor: pointer;
 
     &:hover {
         background-color: main.$BrainFlix-DarkBlue;
@@ -89,11 +91,55 @@
 
 // Over Tablet Sizes
 @include main.breakpoints-medium {
+
+    .header {
+        flex-direction: row;
+        padding: 1rem 2rem;
+        
+        &-nav {
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1rem;
+
+            &__search {
+                width: 15rem;
+            }
+
+            &__button {
+                margin-top: 0rem;
+                width: 12.5rem;
+                height: 44px;
+            }
+
+            &__avatar {
+                order: 3;
+
+                img {
+                    height: 44px;
+                    width:  44px;
+                    object-fit: cover;
+                }
+               
+            }
+
+        }
+
+    }
     .primary-btn {
         // height: 2.5rem;
         min-width: 9.375rem;
         max-width: 15rem; // arbitrary, not yet set or figured out
         padding: 0rem 0.5rem;
+    }
+
+}
+
+// Over Desktop Sizes
+@include main.breakpoints-large {
+    .header {
+        max-width: 63.75rem;
+        margin: 0 auto;
+        padding: 1rem 0rem;
     }
 
 }

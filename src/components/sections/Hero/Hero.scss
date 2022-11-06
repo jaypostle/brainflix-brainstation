@@ -1,4 +1,30 @@
+@use "../../../styles/main";
+
 .hero__video {
     // width: 100vw;
     width: 100vw;
 }
+
+
+@include main.breakpoints-medium {
+
+    .section--hero {
+        display: flex;
+        background-color: main.$BrainFlix-DarkBlack;
+    }
+
+    .hero__video {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+}
+
+@include main.breakpoints-large {
+    .hero__video {
+        max-width: 55rem;
+        margin: 0 auto;
+    }
+}
+
+

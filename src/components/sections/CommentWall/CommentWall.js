@@ -1,10 +1,12 @@
 import React from 'react'
 import Avatar from '../../atoms/Avatar/Avatar';
+import './CommentWall.scss';
+import commentIcon from '../../../assets/icons/add_comment.svg'
 
 function CommentWall({videoComments}) {
   return (
     <section className="section--comments">
-            <h4>3 Comments</h4>
+            <h3>3 Comments</h3>
             <div className="comment-feed">
                 <div className="comment-feed__form-wrapper">
                     <Avatar />
@@ -14,10 +16,15 @@ function CommentWall({videoComments}) {
                             <input type="text" className="comment-feed__input-text comment-feed__input--name" id="name" name="name" placeholder="Enter your name"/>
                         </label> */}
                         <label htmlFor="comment" className='comment-feed__label'>
-                            Join the conversation:
-                            <input type="text" className="comment-feed__input-text comment-feed__input--comment" id="comment" name="comment" placeholder="Add a new comment"/>
+                            Join the conversation: <br />
+                        {/* </label> */}
+                            <textarea type="text" className="comment-feed__input-textarea comment-feed__input--comment" id="comment" name="comment" placeholder="Add a new comment"/>
                         </label>
-                        <input type="submit" className="primary-cta comment-feed__submit" value="Comment"/>
+                        <button className='primary-btn header-nav__button comment-feed__submit' href="/">
+                            <img src={commentIcon} alt="comment icon" />
+                            Comment
+                            <img className="hide-me" src={commentIcon} alt="comment icon" />
+                        </button>
                     </form>
                 </div>
                 <div className="comment-feed-waterfall">

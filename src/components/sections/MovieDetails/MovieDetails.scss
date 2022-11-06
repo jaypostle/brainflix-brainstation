@@ -19,7 +19,7 @@
     padding: 1.5rem 0rem;
 
     &__creator {
-        font-weight: 700;
+        font-weight: 500;
     }
 
     &__date {
@@ -49,4 +49,70 @@
     &--views, &--likes {
         @include main.mixins-display-flex($justifyContent: left, $gap: 0rem);
     }
+}
+
+
+@include main.breakpoints-medium {
+    .movie-details {
+        padding: 0rem 2rem;
+
+    }
+    
+    .meta-data-wrapper--creator-info {
+        flex-direction: row;
+    }
+
+    .meta-data-wrapper--public-info {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .movie-details {
+        &__title {
+            margin-bottom: 0rem;
+        }
+    }
+
+    .movie-metadata {
+        border-top: none;
+        padding: 1rem 0rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
+// Over Desktop Sizes
+@include main.breakpoints-large {
+
+    /// Wrapper Flex Layout ///
+    .video-content {
+        display: flex;
+        max-width: 63.75rem;
+        margin: 0 auto;
+        padding: 0rem;
+       
+
+        &__details {
+            flex: 5;
+        }
+
+        &__next {
+            flex: 3;
+            border-left: 1px solid main.$Mercury;
+        }
+        .movie-details {
+            padding: 0rem;
+            
+        }
+
+    }
+
+    .movie-metadata, .movie-details__description {
+        padding-right: 1.5rem;
+    }
+  
+    //     max-width: 63.75rem;
+    //     margin: 0 auto;
+    //     padding: 0rem;
+    
 }
