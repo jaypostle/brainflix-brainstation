@@ -82,13 +82,10 @@
     }
 }
 
-@include main.breakpoints-medium {
+@include main.breakpoints-large {
     .videos-list {
         width: 100%;
     }
-}
-
-@include main.breakpoints-medium {
     .section--next-videos {
         padding: 0rem 0rem 0rem 1.5rem;
     }

@@ -9,3 +9,10 @@ export const getVideos = (videoId) => {
 export const getVideoDetails = (videoId) => {
   return videoDetails.find((video) => video.id === videoId);
 };
+
+
+export const formatDate = (date) => {
+  let newDate = new Date(date).toLocaleDateString();
+  // console.log(newDate);
+  return newDate;
+}

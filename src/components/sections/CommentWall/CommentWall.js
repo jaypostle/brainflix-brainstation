@@ -2,8 +2,14 @@ import React from 'react'
 import Avatar from '../../atoms/Avatar/Avatar';
 import './CommentWall.scss';
 import commentIcon from '../../../assets/icons/add_comment.svg'
+import {formatDate} from '../../../utilities/utilities';
 
 function CommentWall({videoComments}) {
+
+   
+
+
+
   return (
     <section className="section--comments">
             <h3>3 Comments</h3>
@@ -36,7 +42,7 @@ function CommentWall({videoComments}) {
                                 {/* <img src="" alt="" className="comment-feed-waterfall__avatar" /> */}
                                 <div className="comment-feed-waterfall__text-info">
                                     <div className="comment-feed-waterfall__meta-info">
-                                        <span className="comment-feed-waterfall__author">{comment.name}</span><span className="comment-feed-waterfall__date">{comment.timestamp}</span>
+                                        <span className="comment-feed-waterfall__author">{comment.name}</span><span className="comment-feed-waterfall__date">{formatDate(comment.timestamp)}</span>
                                     </div>
                                     <p className="comment-feed-waterfall__comment">{comment.comment}</p>
                                 </div>
