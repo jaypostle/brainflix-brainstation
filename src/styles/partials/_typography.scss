@@ -1,0 +1,96 @@
+@use "./helpers/breakpoints" as breakpoints;
+
+body, input {
+    font-family: Avenir, Arial, Helvetica, sans-serif;
+    // line-height: 1.5;
+}
+
+//*** MOBILE ***//
+//***         ***//
+
+// Page Header
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+// Section Header
+h2 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+// Sub Header
+h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+}
+
+// Body Copy 
+p {
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.3rem;
+}
+
+
+// Labels & Buttons
+a,
+label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+}
+
+
+
+
+//*** DESKTOP ***//
+//***         ***//
+
+
+// Over Tablet Sizes
+@include breakpoints.medium {
+
+    h1 {
+        font-size: 2.0625rem;
+        font-weight: 700;
+        line-height: 2.75rem;
+    }
+
+    // Section Header
+    h2 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1.25rem;
+    }
+
+    // Sub Header
+    h3 {
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 1.375rem;
+    }
+
+    // Body Copy 
+    p {
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.4rem;
+    }
+
+    // Labels & Buttons
+    a,
+    label {
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+    }
+
+
+}

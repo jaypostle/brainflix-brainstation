@@ -1,0 +1,20 @@
+@use "../../../styles/main";
+
+.avatar {
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+
+// Over Tablet Sizes
+@include main.breakpoints-medium {
+    .avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+
+}
