@@ -26,8 +26,8 @@
         background-position: center;
         background-size: cover;
         border-radius: 0.25rem;
-
-       
+        cursor: pointer;
+    
     }
   
     &__meta-data {
@@ -56,7 +56,7 @@
 
 @include main.breakpoints-medium {
     .section--next-videos {
-        padding: 0 2rem;
+        padding: 0 2rem 2rem ;
     }
 
     .videos-list {
@@ -87,6 +87,6 @@
         width: 100%;
     }
     .section--next-videos {
-        padding: 0rem 0rem 0rem 1.5rem;
+        padding: 0rem 0rem 2rem 1.5rem;
     }
 }
