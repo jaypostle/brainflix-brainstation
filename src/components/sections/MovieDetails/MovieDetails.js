@@ -2,12 +2,12 @@ import React from 'react'
 import "./MovieDetails.scss";
 import Views from '../../../assets/icons/views.svg';
 import Likes from '../../../assets/icons/likes.svg';
-import {formatDate} from '../../../utilities/utilities';
+import {formatDate, formatMomentDate} from '../../../utilities/utilities';
+
 
 function MovieDetails({videoDetails}) {
-  // console.log(videoDetails);
-
-  
+ 
+ 
 
 
   let formattedVideoDate = formatDate(videoDetails.timestamp);
@@ -19,7 +19,7 @@ function MovieDetails({videoDetails}) {
       <h1 className="movie-details__title">{videoDetails.title}</h1>
       <div className="movie-metadata">
         <div className="meta-data-wrapper--creator-info">
-          <span className="movie-metadata__creator">By {videoDetails.channel}</span><span className="movie-metadata__date">{formattedVideoDate}</span>
+          <span className="movie-metadata__creator">By {videoDetails.channel}</span><span className="movie-metadata__date">{formattedVideoDate} | {formatMomentDate(videoDetails.timestamp)}</span>
         </div>
         <div className="meta-data-wrapper--public-info">
           <div className="meta-data-wrapper--views">
