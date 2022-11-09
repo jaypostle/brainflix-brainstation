@@ -1,16 +1,17 @@
 import { useState } from 'react';
-import Header from './components/sections/Header/Header';
 import Hero from './components/sections/Hero/Hero';
 import MovieDetails from './components/sections/MovieDetails/MovieDetails';
 import CommentWall from './components/sections/CommentWall/CommentWall';
 import NextVideos from './components/sections/NextVideos/NextVideos';
 // import VideoDetails from './data/video-details.json';
-
+import { useParams } from 'react-router-dom';
 import {getVideos, getVideoDetails} from './utilities/utilities';
 
 import './App.scss';
 
 function App() {
+  const { paramsVideoId } = useParams();
+  console.log(paramsVideoId);
 
   const [currentVideoId, setCurrentVideoId] = useState("84e96018-4022-434e-80bf-000ce4cd12b8"); // takes an id
 
@@ -33,7 +34,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      
       <Hero videoDetails={videoExpandedDetails}/>
       <main className='video-content'>
         <div className="video-content__details">

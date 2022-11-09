@@ -1,5 +1,6 @@
 import React from 'react'
 import "./NextVideos.scss";
+// import { Link } from 'react-router-dom';
 
 function NextVideos({videoList, onVideoClick}) {
 
@@ -13,24 +14,19 @@ function NextVideos({videoList, onVideoClick}) {
       {videoList && videoList.map((video) => {
         return(
           <article className="next-video" key={video.id}>
-          <div className='next-video__thumbnail' alt={video.title} 
-            onClick={(event) => {
-              onVideoClick(event, video.id);
-            }}
-            style={{
-              backgroundImage: `url(${video.image})`
-            }}
-          >
+          {/* <Link to={`/videos/${video.id}`}> */}
+            <div className='next-video__thumbnail' alt={video.title} 
+              onClick={(event) => {
+                onVideoClick(event, video.id);
+              }}
+              style={{
+                backgroundImage: `url(${video.image})`
+              }}
+            >
 
-          </div>
-          {/* <img 
-            className='next-video__thumbnail' 
-            src={video.image} 
-            alt={video.title} 
-            onClick={(event) => {
-              onVideoClick(event, video.id);
-            }}
-            /> */}
+            </div>
+          {/* </Link> */}
+        
           <div className="next-video__meta-data">
             <h3 className="next-video__title">{video.title}</h3>
             <p className="next-video__creator">{video.channel}</p>
