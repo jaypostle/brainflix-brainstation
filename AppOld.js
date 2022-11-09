@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import Hero from '../../components/sections/Hero/Hero';
-import MovieDetails from '../../components/sections/MovieDetails/MovieDetails';
-import CommentWall from '../../components/sections/CommentWall/CommentWall';
-import NextVideos from '../../components/sections/NextVideos/NextVideos';
+import Hero from './components/sections/Hero/Hero';
+import MovieDetails from './components/sections/MovieDetails/MovieDetails';
+import CommentWall from './components/sections/CommentWall/CommentWall';
+import NextVideos from './components/sections/NextVideos/NextVideos';
 // import VideoDetails from './data/video-details.json';
 import { useParams } from 'react-router-dom';
-import {getVideos, getVideoDetails} from '../../utilities/utilities';
+import {getVideos, getVideoDetails} from './utilities/utilities';
 
-import '../../App.scss';
+import './App.scss';
 
-function VideoPage() {
+function App() {
   const { paramsVideoId } = useParams();
   console.log(paramsVideoId);
 
@@ -49,4 +49,4 @@ function VideoPage() {
   );
 }
 
-export default VideoPage;
+export default App;
