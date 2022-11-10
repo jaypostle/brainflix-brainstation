@@ -1,4 +1,5 @@
 @use "./helpers/breakpoints" as breakpoints;
+@use "./colors" as colors;
 
 body, input {
     font-family: Avenir, Arial, Helvetica, sans-serif;
@@ -45,6 +46,10 @@ label {
     line-height: 1.25rem;
     letter-spacing: 0.25px;
     text-transform: uppercase;
+}
+
+h1, h2, h3, h4, p, span {
+    color: colors.$BrainFlix-Black;
 }
 
 

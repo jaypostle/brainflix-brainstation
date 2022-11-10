@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 function NextVideos({videoList}) {
 
-  console.log(videoList);
 
   return (
     <section className="section--next-videos">
@@ -17,10 +16,7 @@ function NextVideos({videoList}) {
           <article className="next-video" key={video.id}>
           <Link to={`/videos/${video.id}`}>
             <div className='next-video__thumbnail' alt={video.title} 
-              onClick={(event) => {
-                // onVideoClick(event, video.id);
-                console.log(event)
-              }}
+              
               style={{
                 backgroundImage: `url(${video.image})`
               }}
