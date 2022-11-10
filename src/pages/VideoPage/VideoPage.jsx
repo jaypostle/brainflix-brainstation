@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Hero from '../../components/sections/Hero/Hero';
 import MovieDetails from '../../components/sections/MovieDetails/MovieDetails';
 import CommentWall from '../../components/sections/CommentWall/CommentWall';
 import NextVideos from '../../components/sections/NextVideos/NextVideos';
 
 import { useParams } from 'react-router-dom';
-import {getVideos} from '../../utilities/utilities';
-import axios from 'axios';
+
 
 import '../../App.scss';
 
