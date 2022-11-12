@@ -9,7 +9,8 @@ import axios from 'axios';
 function App() {
 
   // ** STATES ** //
-  const [currentVideoId, setCurrentVideoId] = useState("84e96018-4022-434e-80bf-000ce4cd12b8"); // takes an id
+  const [defaultVideo, setDefaultVideo] = useState("84e96018-4022-434e-80bf-000ce4cd12b8")
+  const [currentVideoId, setCurrentVideoId] = useState(defaultVideo); // takes an id
 
   // This is for the side panel
   const [videos, setVideos] = useState();
@@ -57,13 +58,14 @@ useEffect(() => {
 
   const handleVideoChange = (videoId) => {
     setCurrentVideoId(videoId);
+    console.log(videoId);
   };
 
   return (
     <BrowserRouter>
     <Header />
       <Routes>
-        <Route path='/' element={<VideoPage videos={videos} videoExpandedDetails={videoExpandedDetails} onVideoChange={handleVideoChange}/>}/>
+        <Route path='/' element={<VideoPage videos={videos} videoExpandedDetails={videoExpandedDetails} onVideoChange={handleVideoChange} defaultVideo={defaultVideo}/>}/>
         <Route path='/videos' element={<VideoPage videos={videos} videoExpandedDetails={videoExpandedDetails} onVideoChange={handleVideoChange}/>}/>
 
         {/* I think this is right??? */}

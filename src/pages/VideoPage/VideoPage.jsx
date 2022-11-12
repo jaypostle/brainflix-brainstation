@@ -7,9 +7,7 @@ import NextVideos from '../../components/sections/NextVideos/NextVideos';
 import { useParams } from 'react-router-dom';
 
 
-import '../../App.scss';
-
-function VideoPage({videoExpandedDetails, videos, onVideoChange}) {
+function VideoPage({videoExpandedDetails, videos, onVideoChange, defaultVideo}) {
   const { videoId } = useParams();
   if(videoId) {
     console.log(videoId);
@@ -73,12 +71,19 @@ function VideoPage({videoExpandedDetails, videos, onVideoChange}) {
   
 
     useEffect(() => {
+
+        //  if the link is / then run onVideoChange and set it to the id of the first video
         if(videoId) {
             if(Object.keys(videoId).length !== 0) {
                 onVideoChange(videoId);
             }
         }
     }, [videoId]);
+
+    // useEffect(() => {
+    //         onVideoChange(defaultVideo);
+    //         console.log(defaultVideo);
+    // }, [defaultVideo])
 
   return (
     <div className="App">

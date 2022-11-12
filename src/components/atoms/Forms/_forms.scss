@@ -1,0 +1,10 @@
+@use "../../../styles/main";
+
+input, textarea {
+    font-family: "Avenir", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    &::placeholder {
+        color: main.$BrainFlix-Black!important;
+        font-family: "Avenir", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        
+    }
+}

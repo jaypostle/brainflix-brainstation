@@ -12,7 +12,7 @@ body, input {
 // Page Header
 h1 {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 2rem;
 }
 
@@ -40,7 +40,8 @@ p {
 
 // Labels & Buttons
 a,
-label {
+label,
+button {
     font-size: 0.75rem;
     font-weight: 700;
     line-height: 1.25rem;
