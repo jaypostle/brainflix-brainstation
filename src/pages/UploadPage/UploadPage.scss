@@ -1,6 +1,13 @@
 @use "../../styles/main";
 @use "../../components/atoms/Forms/forms";
 
+
+// ** Toastify ** //
+
+.Toastify__progress-bar-theme--light {
+    background: main.$BrainFlix-Blue!important;
+}
+
 .section--upload {
     padding: 1rem;
     // border-top: 1px solid #E1E1e1;
@@ -66,6 +73,9 @@
 
 // Over Tablet Sizes
 @include main.breakpoints-medium {
+    .section--upload {
+        padding: 2rem;
+    }
     .upload {
         &-container {
             padding-top: 2rem;
@@ -84,7 +94,7 @@
         &__buttons {
             display: flex;
             flex-direction: row-reverse;
-            margin-top: 1rem;
+            margin-top: 3rem;
 
         }
 
@@ -130,6 +140,7 @@
             flex: 100%;
             border-top: 1px solid #E1E1e1;
             padding-top: 2rem;
+            margin-top: 0rem;
         }
 
         &__video {

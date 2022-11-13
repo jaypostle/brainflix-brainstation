@@ -5,6 +5,7 @@ import Header from './components/sections/Header/Header';
 import { useEffect, useState } from 'react';
 import {getVideos} from './utilities/utilities';
 import axios from 'axios';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 function App() {
 
@@ -68,10 +69,10 @@ useEffect(() => {
         <Route path='/' element={<VideoPage videos={videos} videoExpandedDetails={videoExpandedDetails} onVideoChange={handleVideoChange} defaultVideo={defaultVideo}/>}/>
         <Route path='/videos' element={<VideoPage videos={videos} videoExpandedDetails={videoExpandedDetails} onVideoChange={handleVideoChange}/>}/>
 
-        {/* I think this is right??? */}
         <Route path='/videos/:videoId' element={<VideoPage videos={videos} videoExpandedDetails={videoExpandedDetails} onVideoChange={handleVideoChange} />}/>
 
         <Route path='/upload' element={<UploadPage />}/>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );

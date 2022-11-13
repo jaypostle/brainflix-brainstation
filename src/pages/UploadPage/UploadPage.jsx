@@ -2,9 +2,27 @@ import React from 'react';
 import './UploadPage.scss';
 import UploadDefault from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/icons/publish.svg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function UploadPage() {
+
+    const notify = () => toast("Video Uploaded.");
+
+
+    let navigate = useNavigate();
+
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        console.log(event);
+        notify();
+        setTimeout(() => {
+            navigate('/');
+        }, 3000);
+    }
+
+
   return (
     <>
     <section>
@@ -30,11 +48,25 @@ function UploadPage() {
                     </label>
                 </div>
                 <div className="upload__buttons">
-                    <button type="submit" className='primary-btn upload__btn' href="/">
-                        <img src={publishIcon} alt="comment icon" />
-                        Publish
-                        <img className="hide-me" src={publishIcon} alt="comment icon" />
-                    </button>
+                    
+                        <button type="submit" className='primary-btn upload__btn' onClick={(event) => handleFormSubmit(event)}>
+                            <img src={publishIcon} alt="comment icon" />
+                            Publish
+                            <img className="hide-me" src={publishIcon} alt="comment icon" />
+                        </button>
+                  
+                    <ToastContainer 
+                        position="bottom-center"
+                        autoClose={2000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                    />
                     <Link to="/" className='secondary-btn upload__secondary-btn'>Cancel</Link>
                 </div>
             </form>
