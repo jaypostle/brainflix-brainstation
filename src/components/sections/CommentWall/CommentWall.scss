@@ -19,7 +19,6 @@
 .comment-feed {
     &-form {
         @include main.mixins-display-flex($justifyContent: left, $alignItems: left, $flexDirection: column, $gap: 0rem);
-        // color: main.$Silver;
         width: 100%;
     }
 
@@ -35,7 +34,7 @@
         height: 5rem;
         border-radius: 0.25rem;
         padding: 0.75rem;
-        // padding-left: 2.5rem;
+        resize: none;
         border: 1px solid main.$Mercury;
         background-color: main.$Alabaster;
         font-family: 'Avenir', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -57,7 +56,7 @@
         display: flex;
         gap: 1rem;
         padding: 1rem 0rem;
-        // border-top: 1px solid main.$Mercury;
+   
         border-bottom: 1px solid main.$Mercury;
 
         &:nth-of-type(1) {
@@ -125,7 +124,7 @@
 @include main.breakpoints-large {
     .section--comments {
         padding: 1rem 0rem;
-        // padding-right: 1rem;
+       
     }
 
     .comment-feed {

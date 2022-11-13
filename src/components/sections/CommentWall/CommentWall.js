@@ -12,7 +12,7 @@ function CommentWall({videoComments}) {
 
   return (
     <section className="section--comments">
-            <h3>3 Comments</h3>
+            <h3>{videoComments.length} Comments</h3>
             <div className="comment-feed">
                 <div className="comment-feed__form-wrapper">
                     <Avatar />

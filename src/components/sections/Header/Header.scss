@@ -79,6 +79,7 @@
     border-radius: 0.25rem;
     transition: all 400ms ease;
     text-align: center;
+    border-style: none;
     text-decoration: none;
     @include main.mixins-display-flex($justifyContent: space-between, $gap: 0rem );
     cursor: pointer;
@@ -140,6 +141,7 @@
         max-width: 63.75rem;
         margin: 0 auto;
         padding: 1rem 0rem;
+        // border-bottom: 1px solid #E1E1e1;
     }
 
 }
