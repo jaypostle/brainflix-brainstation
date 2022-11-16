@@ -19,14 +19,14 @@ function VideoPage({videoExpandedDetails, videos, onVideoChange, defaultVideo}) 
 
     useEffect(() => {
         //  if the link is / then run onVideoChange and set it to the id of the first video
-        if(videoId) {
-            if(Object.keys(videoId).length !== 0) {
+        // if(videoId) {
+            // if(Object.keys(videoId).length !== 0) {
                 onVideoChange(videoId);
-            }
-        } else {
-          onVideoChange(defaultVideo)
-        }
-    }, [videoId]);
+            // }
+        // } else {
+          // onVideoChange(defaultVideo)
+        // }
+    }, [videoId, onVideoChange]);
 
  
 
