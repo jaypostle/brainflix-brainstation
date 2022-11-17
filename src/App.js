@@ -22,10 +22,9 @@ function App() {
   const [videoExpandedDetails, setVideoExpandedDetails] = useState();
 
   // **** FETCH USE EFFECT **** ///
-  const SEARCH_URL = `https://project-2-api.herokuapp.com/videos`;
-  const API_KEY = `?api_key=${process.env.REACT_APP_BRAINFLIX_API_KEY}`;
-  const searchByVideoId = (videoId) => `${SEARCH_URL}/${videoId}${API_KEY}`;
-  const searchVideosAll = `${SEARCH_URL}${API_KEY}`;
+  const SEARCH_URL = `http://localhost:8080/api`;
+  const searchByVideoId = (videoId) => `${SEARCH_URL}/videos/${videoId}`;
+  const searchVideosAll = `${SEARCH_URL}/videos`;
 
   // * Fetch Total Video Data * //
   useEffect(() => {
@@ -36,7 +35,8 @@ function App() {
           searchByVideoId(currentVideoId)
         );
 
-        // console.log(data);
+        // console.log(videos);
+        // console.log(videodetails);
         const filteredVideos = getVideos(currentVideoId, videos);
         setVideos(filteredVideos); // this sets the video list as all videos
         setVideoExpandedDetails(videodetails);
@@ -47,20 +47,6 @@ function App() {
     fetchData();
   }, [currentVideoId]);
 
-  // * Fetch Single Video Data * //
-  // useEffect(() => {
-  //   const fetchSingleVideo = async () => {
-  //     try {
-  //       const { data } = await axios.get(searchByVideoId(currentVideoId));
-  //       // console.log(data);
-  //       setVideoExpandedDetails(data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   fetchSingleVideo();
-  // }, [currentVideoId]);
-
   const handleVideoChange = (videoId) => {
     setCurrentVideoId(videoId);
     console.log(videoId);
@@ -70,11 +56,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        {/* <Route path='/' element={<VideoPage videos={videos} videoExpandedDetails={videoExpandedDetails} onVideoChange={handleVideoChange} defaultVideo={defaultVideo}/>}/> */}
         <Route path="/" element={<Navigate to={`/videos/${defaultVideo}`} />} />
-
-        {/* <Route path='/videos' element={<VideoPage videos={videos} videoExpandedDetails={videoExpandedDetails} onVideoChange={handleVideoChange}/>}/> */}
-
         <Route
           path="videos/:videoId"
           element={
