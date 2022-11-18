@@ -35,8 +35,7 @@ function App() {
           searchByVideoId(currentVideoId)
         );
 
-        // console.log(videos);
-        // console.log(videodetails);
+   
         const filteredVideos = getVideos(currentVideoId, videos);
         setVideos(filteredVideos); // this sets the video list as all videos
         setVideoExpandedDetails(videodetails);
@@ -49,7 +48,6 @@ function App() {
 
   const handleVideoChange = (videoId) => {
     setCurrentVideoId(videoId);
-    console.log(videoId);
   };
 
   return (
