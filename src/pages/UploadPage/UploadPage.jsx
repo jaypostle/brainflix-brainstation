@@ -51,13 +51,12 @@ function UploadPage() {
 
     const id = uploadVideo(title, description);
 
-    
-
     const runNavigate = () => {
       id.then((res) => {
         console.log(res);
         // form.reset();
         // notify();
+
         navigateToUploadedVideo(res);
       });
     };
