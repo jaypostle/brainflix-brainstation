@@ -44,18 +44,17 @@ function UploadPage() {
     uploadVideo(title, description);
     form.reset();
     notify();
-   
+
     setTimeout(() => {
       navigate("/");
     }, 3000);
   }
-  
 
   /**
    * On submit
    * get request of the video you just posted
    * that sets state of defaultVideo using the handleChange function you pass down
-   * 
+   *
    */
 
   return (
@@ -63,7 +62,7 @@ function UploadPage() {
       <section>
         <hr className="upload__hr" />
       </section>
-      <section className="section--upload">
+      <section className="section-upload">
         <h1>Upload Video</h1>
         <div className="upload-container">
           <form className="upload__form" ref={formRef}>
