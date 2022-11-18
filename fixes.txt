@@ -1,0 +1,16 @@
+//**
+* Styling
+*
+/
+add space below publish button on desktop
+match input field/comment button height on tablert/desktopsearch button layout in nav around +- 900 px width
+have sie of video player larger to match the mockup
+set maxwidth at 1280px and make margin 0 auto
+
+/ **
+Code practices
+** /
+
+bem correctly ex line 31 upload page. The modifier class has to modify another class on the same element
+remove console logs
+remove uncommencted code

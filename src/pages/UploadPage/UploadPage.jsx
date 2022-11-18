@@ -22,9 +22,17 @@ function UploadPage() {
         "http://localhost:8080/api/videos/",
         newVideo
       );
+      console.log("video was uploaded", data);
+      return data.id;
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const navigateToUploadedVideo = (id) => {
+    setTimeout(() => {
+      navigate(`/video/${id}`); /// change this to video/:id and grab from res
+    }, 3000);
   };
 
   const formRef = useRef();
@@ -41,21 +49,26 @@ function UploadPage() {
       return;
     }
 
-    uploadVideo(title, description);
-    form.reset();
-    notify();
-   
-    setTimeout(() => {
-      navigate("/");
-    }, 3000);
+    const id = uploadVideo(title, description);
+
+    
+
+    const runNavigate = () => {
+      id.then((res) => {
+        console.log(res);
+        // form.reset();
+        // notify();
+        navigateToUploadedVideo(res);
+      });
+    };
+    runNavigate();
   }
-  
 
   /**
    * On submit
    * get request of the video you just posted
    * that sets state of defaultVideo using the handleChange function you pass down
-   * 
+   *
    */
 
   return (

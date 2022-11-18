@@ -9,8 +9,8 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   // ** STATES ** //
-  const [defaultVideo, setDefaultVideo] = useState(
-    "84e96018-4022-434e-80bf-000ce4cd12b8"
+  const [defaultVideo, setDefaultVideo] = useState( //** */ this doesn't need to be state since it'll never change
+    "84e96018-4022-434e-80bf-000ce4cd12b8" //** */ first video in the array that comes back from the api
   );
   const [currentVideoId, setCurrentVideoId] = useState(defaultVideo); // takes an id
 
