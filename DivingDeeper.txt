@@ -1,0 +1,25 @@
+Diving Deeper
+Diving Deeper challenges should only be attempted if all project requirements are met and adding Diving Deeper challenges do not conflict with the existing requirements. The following are suggestions that you can try to take your understanding deeper and go above and beyond the basic requirements.
+
+Comments endpoints from Sprint 2 Diving Deeper
+Implement POST and DELETE endpoints from Sprint 2.
+POST /videos/:id/comments for creating a new comment
+DELETE /videos/:videoId/comments/:commentId for deleting a comment
+Custom Video Player
+You may use this sample video here.
+Video controls should not be the default <video> controls. They should be added and styled with the provided assets, CSS, and appropriate HTML elements. Refer to sprints 1 & 2 design packages.
+Given the provided creative mockups, add full functionality to the video player. This includes details such as the play/pause functionality, the blue scrubber bar, fullscreen, time tracking, and volume control. All necessary assets should be included within your original design package. For volume control, feel free to reuse the scrubber design and assets.
+Upload Custom Poster Image
+Rather than have a hard coded image path for the poster image of the uploaded video, add an input field to your upload form that allows the user to upload an image from their local machine.
+The image should be added to your Node server and the data should not be reset if the Node server restarts.
+Images do not need to be cropped upon upload.
+There should be a default placeholder image should the user not provide one, or there should be validation to check that there is an image provided before posting to your Node server.
+Liking Videos
+Part 1: Implement a PUT endpoint at /videos/:videoId/likes that increments the like count of the video specified by video.
+
+Part 2: Building on the previous task, hook up an event handler to the like button (in the React front-end) to send a PUT request to hit your /videos/:videoId/likes endpoint.
+
+
+
+// Helpful API doc structure
+https://project-2-api.herokuapp.com/register
